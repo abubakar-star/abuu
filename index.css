@@ -1,0 +1,274 @@
+main{
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("main.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+  overflow: hidden;
+}
+
+.firstWords{
+    position: absolute;
+      top: 27%;  /* adjust vertically */
+      left: 4%; /* adjust horizontally toward the car */
+      font-weight: bold;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+      cursor: pointer;
+}
+
+.firstWords h2{
+color: white;
+      font-size: 50px;
+      
+}
+
+.headc{
+  color: rgb(235, 229, 229);
+}
+.headc1{
+  color: rgb(189, 186, 186);
+}
+.headc2{
+  color: rgb(151, 148, 148);
+}
+
+nav{
+    background-image: url("nav.png");
+     background-size:contain;
+    background-repeat: no-repeat;
+    background-position:top;
+    height: 11.7vh;
+    width: 100vh;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  padding: 1rem 2rem;
+}
+
+.firstWords span:hover {
+  color: white; /* fallback for clip */
+  background: none;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-left: 90px;
+  margin-top: 15px;
+}
+
+.nav-list li a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.1rem;
+/*  transition: color 0.3s;
+  position: relative;*/
+
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s, transform 0.3s;
+}
+
+/* Hover underline effect */
+.nav-list li a::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: #f0a500;
+/*transition: width 0.3s ease;*/
+
+   transition: width 0.3s ease, height 0.3s ease;
+  border-radius: 2px;
+}
+
+.nav-list li a:hover::after {
+  width: 100%; /* Full underline on hover */
+
+  height: 5px;
+}
+
+.nav-list li a:hover {
+  color: #f0a500;
+
+   transform: scale(1.1); /* Slightly enlarges the link */
+}
+
+aside{
+  color: white;
+   font-family: Arial, sans-serif;
+   position: absolute;
+      top: 5%;  /* adjust vertically */
+      left: 4%; /* adjust horizontally toward the car */
+}
+
+aside h4{
+  transition: transform 0.3s ease;
+}
+
+aside h4:hover{
+  transform: scale(1.2); /* 20% bigger */
+  cursor: none;
+}
+
+.small-cap{
+  font-size: 15px;
+}
+
+article{
+ height: 8.5vh;
+ width: 100%;
+  position: absolute;
+      top: 91.5%;  /* adjust vertically */
+      background-color: rgba(20, 20, 20, 0.75);
+}
+
+
+ .pagination {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+.dot {
+      width: 20px;
+      height: 8px;
+      background-color: #ccc;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+ .dot.active {
+      width: 40px;
+      background-color: #333;
+    }
+
+.hero {
+      position: absolute;
+      top: 45%;  /* adjust vertically */
+      left: 35%; /* adjust horizontally toward the car */
+      background: url('m.png') no-repeat center center / cover;
+      color: white;
+      padding: 60px 20px;
+      min-height: 250px;
+    }
+
+    .content {
+      max-width: 700px;/*
+      background-color: rgba(0, 0, 0, 0.5);*/
+      padding-left: 25px;
+      position: relative;
+    }
+
+    .content::before,
+    .content::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 6px;
+      background-color: #d1af75;
+      height: 0;
+    }
+
+    .content::before {
+      bottom: 50%;
+      animation: drawLineTop 3s ease-out forwards;
+      animation-delay: 0s;
+      animation-iteration-count: infinite;
+      animation-duration: 16s;
+    }
+
+    .content::after {
+      top: 50%;
+      animation: drawLineBottom 3s ease-out forwards;
+      animation-delay: 0s;
+      animation-iteration-count: infinite;
+      animation-duration: 16s;
+    }
+
+   @keyframes drawLineTop {
+  0%   { height: 0; }
+  18.75%  { height: 50%; }
+  50%  { height: 50%; }
+  83% { height: 0; }
+  100% { height: 0; }
+}
+   @keyframes drawLineBottom {
+  0%   { height: 0; }
+  18.75%  { height: 50%; }
+  50%  { height: 50%; }
+  83% { height: 0; }
+  100% { height: 0; }
+}
+
+    .headline-line {
+      font-size: 25px;
+      font-weight: bold;
+      line-height: 1.4;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typewriter 16s ease forwards;
+      animation-iteration-count: infinite;
+      animation-duration: 16s;
+    }
+
+    .headline-line:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    .headline-line:nth-child(2) {
+      animation-delay: 0.3s;
+    }
+
+    .headline-line:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+
+    .subtext {
+      font-size: 14px;
+      opacity: 0;
+      margin-top: 10px;
+      animation: fadeIn 1.5s ease forwards;
+      animation-delay: 0.3s;
+      animation-iteration-count: infinite;
+      animation-duration: 16s;
+    }
+
+    @keyframes typewriter {
+  0%   { width: 0; }
+18.75%  { width: 100%; }
+  50%     { width: 100%; }
+  83%   { width: 0; }
+  100% { width: 0; }
+}
+
+@keyframes fadeIn {
+  0%, 12.5% { opacity: 0; }
+ 18.75%, 50% { opacity: 0.85; }
+  83%, 100% { opacity: 0; }
+}
+
+.logoDes{
+position: fixed;
+    bottom: 0px;
+    right: 20px
+}
+
+.logoDes p{
+  color: white;
+}
