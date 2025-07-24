@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bookme Navbar</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #2c3e50, #34495e);
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f1f1f1;
+      padding: 0.75rem 2rem;
+      border-radius: 0 0 40px 40px;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 95% 90%, 5% 90%, 0 100%);
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    .logo .dot {
+      color: #ccc;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #000;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    .cta-button {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    .cta-button:hover {
+      background-color: white;
+      color: #000;
+    }
+
+    .icon {
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">Bookme<span class="dot">.com</span></div>
+    <div class="nav-links">
+      <a href="#">List your property</a>
+      <a href="#">Support</a>
+      <a href="#">Trips</a>
+      <a href="#">Sing in</a> <!-- Note: "Sing in" is assumed to be a typo for "Sign in" -->
+    </div>
+    <button class="cta-button">
+      Get the app <span class="icon">&#x2193;</span>
+    </button>
+  </div>
+</body>
+</html>
